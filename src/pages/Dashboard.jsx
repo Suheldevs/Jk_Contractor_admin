@@ -33,7 +33,7 @@ import CopyRight from "../components/CopyRight";
 const SidebarItem = ({ name, icon, active, onClick, collapsed }) => {
   return (
     <div
-      className={`flex items-center ${active ? 'bg-[#ebb661] text-white' : 'text-neutral-300 hover:bg-neutral-700'} rounded-lg cursor-pointer transition-all duration-200 mb-0.5 px-2 py-2 group`}
+      className={`flex items-center ${active ? 'bg-[#ebb661] text-white' : 'text-neutral-300 hover:bg-neutral-700'} rounded-lg cursor-pointer transition-all duration-200 mb-2 px-3 py-2 group`}
       onClick={() => onClick(name)}
     >
       <div className={`${active ? 'text-white' : 'text-neutral-400 group-hover:text-white'} mr-3 transition-colors`}>{icon}</div>
@@ -51,8 +51,8 @@ const DashboardContent = ({ section }) => {
   switch (section) {
     case "Dashboard":
       return <Home />;
-    // case "Project":
-    //   return <ProjectDashboard />;
+    case "Project":
+      return <ProjectDashboard />;
     case "Blog":
       return <BlogDashboard />;
     case "Gallery":
@@ -154,7 +154,7 @@ const Dashboard = () => {
               //   <img src={cclogo} alt="CodeCrafter Logo" className="h-12" />
               // </a>
                <div className="">
-              <h1 className=" font-semibold text-neutral-800">Retd. Judge Ashok Kumar</h1>
+              <h1 className=" text-2xl font-semibold text-neutral-800">Jk Contractor</h1>
             </div>
             )}
             <button 
@@ -166,7 +166,7 @@ const Dashboard = () => {
           </div>
           
           {/* Navigation */}
-          <div className="flex-1 px-3 py-3 overflow-y-auto">
+          <div className="flex-1 px-3 mt-5 py-3 overflow-y-auto">
             <SidebarItem 
               name="Dashboard" 
               icon={<BarChart2 size={20} />} 
@@ -188,13 +188,13 @@ const Dashboard = () => {
               onClick={setSection} 
               collapsed={sidebarCollapsed} 
             />
-            {/* <SidebarItem 
+            <SidebarItem 
               name="Project" 
               icon={<FolderOpenDot size={20} />} 
               active={section === "Project"} 
               onClick={setSection} 
               collapsed={sidebarCollapsed} 
-            /> */}
+            />
             <SidebarItem 
               name="Gallery" 
               icon={<Images size={20} />} 
@@ -212,7 +212,7 @@ const Dashboard = () => {
           </div>
           
           {/* Bottom section */}
-          {/* {!sidebarCollapsed && (
+          {!sidebarCollapsed && (
             <div className="py-2 px-4 border-t border-neutral-800">
               <button 
                 onClick={logout}
@@ -222,7 +222,7 @@ const Dashboard = () => {
                 <span>Logout</span>
               </button>
             </div>
-          )} */}
+          )}
         </div>
       </div>
       
@@ -230,17 +230,7 @@ const Dashboard = () => {
       <div className={`fixed inset-y-0 left-0 z-30 w-64 bg-neutral-900 transform ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:hidden`}>
         <div className="flex flex-col h-full">
           {/* Logo */}
-          <div className="flex items-center justify-between h-16 px-4 border-b border-neutral-800">
-            <a href="https://www.codecrafter.co.in/" target="_blank" rel="noopener noreferrer">
-              <img src={cclogo} alt="CodeCrafter Logo" className="h-8" />
-            </a>
-            <button 
-              className="p-1.5 rounded-lg bg-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-700"
-              onClick={toggleMobileMenu}
-            >
-              <X size={18} />
-            </button>
-          </div>
+          <div className="text-xl">Jk Contractor</div>
           
           {/* Navigation */}
           <div className="flex-1 px-3 py-4 overflow-y-auto">

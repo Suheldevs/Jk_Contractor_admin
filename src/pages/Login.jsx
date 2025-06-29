@@ -34,7 +34,6 @@ function AdminLogin() {
     try {
       setLoading(true);
       const response = await axios.post(apiKey, formData, {withCredentials: true});
-      
       if(response.status === 200 || response.status === 201){
         localStorage.setItem("admin", JSON.stringify(response?.data)); 
       }
@@ -112,8 +111,8 @@ function AdminLogin() {
               <div className="relative">
                 <div className="absolute inset-0 bg-amber-100 rounded-full blur"></div>
                 <div className="relative">
-                  {/* <h1 className='text-2xl font-medium'>Pora Infratech</h1> */}
-                  <img src={logo} alt="Logo" className="h-24 w-24 object-contain rounded-full border-4 border-amber-100 p-1" />
+                  <h1 className='text-2xl font-medium'>Jk Contractor</h1>
+                  {/* <img src={logo} alt="Logo" className="h-24 w-24 object-contain rounded-full border-4 border-amber-100 p-1" /> */}
                 </div>
               </div>
             </div>
@@ -208,13 +207,13 @@ function AdminLogin() {
               </button>
             </form>
           </div>
-          
+{/*           
           <p className="mt-6 text-center text-sm text-[#ebb661]">
             Need help accessing your account? 
             <a href="tel:9336969289" className="ml-1 font-medium text-amber-800 hover:text-amber-900">
               Contact Support
             </a>
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

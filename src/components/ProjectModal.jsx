@@ -162,11 +162,12 @@ const ProjectModal = ({ projectData, onClose }) => {
                   required
                 >
                   <option value="">Select Category</option>
-                  <option value="Residential">Residential</option>
-                  <option value="Commercial">Commercial</option>
-                  <option value="Institutional">Institutional</option>
-                  <option value="Landscape">Landscape</option>
-                  <option value="Public">Public</option>
+                  <option value="renovation">Renovation</option>
+                  <option value="construction">Construction</option>
+                  <option value="infrastructure">Infrastructure</option>
+                  <option value="environmental">Environmental</option>
+                  <option value="hospitality">Hospitality</option>
+                  <option value="technology">Technology</option>
                 </select>
               </div>
               
@@ -191,7 +192,7 @@ const ProjectModal = ({ projectData, onClose }) => {
                   <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-all">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       {uploadingMain ? (
-                        <div className="animate-pulse text-blue-500">Uploading...</div>
+                        <div className="animate-pulse text-amber-500">Uploading...</div>
                       ) : formData.mainImageUrl ? (
                         <img src={formData.mainImageUrl} alt="Main" className="h-24 object-contain" />
                       ) : (
@@ -230,7 +231,7 @@ const ProjectModal = ({ projectData, onClose }) => {
                   <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-all">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       {uploadingOther ? (
-                        <div className="animate-pulse text-blue-500">Uploading...</div>
+                        <div className="animate-pulse text-amber-500">Uploading...</div>
                       ) : (
                         <>
                           <svg className="w-8 h-8 mb-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -283,7 +284,7 @@ const ProjectModal = ({ projectData, onClose }) => {
             <button 
               type="submit" 
               disabled={uploadingMain || uploadingOther || submitting}
-              className={`bg-blue-600 text-white py-2.5 px-5 rounded-lg hover:bg-blue-700 transition-colors flex items-center ${(uploadingMain || uploadingOther || submitting) ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`bg-amber-600 text-white py-2.5 px-5 rounded-lg hover:bg-amber-700 transition-colors flex items-center ${(uploadingMain || uploadingOther || submitting) ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {submitting ? (
                 <>
