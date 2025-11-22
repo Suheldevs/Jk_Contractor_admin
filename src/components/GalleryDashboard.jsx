@@ -293,7 +293,7 @@ const GalleryDashboard = () => {
                       <p className="text-sm text-gray-700">
                         <span className="font-medium">Posted by:</span>
                       </p>
-                      <p className="font-bold text-sm text-gray-900 truncate">{item.postedBy}</p>
+                      <p className="font-bold text-sm text-gray-900 truncate">Admin</p>
                     </div>
                   </div>
                 </div>
